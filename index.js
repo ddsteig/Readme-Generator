@@ -54,9 +54,7 @@ inquirer
     
     `# ${response.title}
 
-      <hr>
-
-      ## Description
+     ## Description
 
       ${response.description}
 
