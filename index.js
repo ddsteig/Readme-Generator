@@ -50,11 +50,13 @@ inquirer
     },
   ])
   .then(function (response) {
-    let readme = `# ${response.title}
+    let readme = 
+    
+    `# ${response.title}
 
       <hr>
 
-      '## Description
+      ## Description
 
       ${response.description}
 
