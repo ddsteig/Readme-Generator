@@ -1,8 +1,6 @@
 # Readme Generator
 
-      <hr>
-
-      '## Description
+      ## Description
 
       A program used to generate a basic readme through node.
 
