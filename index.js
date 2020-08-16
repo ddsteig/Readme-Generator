@@ -1,8 +1,11 @@
-var fs = require("fs");
-var inquirer = require("inquirer");
+const fs = require("fs");
+const inquirer = require("inquirer");
+const util = require("util");
 
-inquirer
-  .prompt([
+const writeFileAsync = util.promisify(fs.writeFile);
+
+function promptUser() {
+  return inquirer.prompt([
     {
       type: "input",
       message: "What is the title of your readme?",
@@ -48,59 +51,64 @@ inquirer
       message: "Enter your GitHub user name.",
       name: "github",
     },
-  ])
-  .then(function (response) {
-    let readme = 
+  ]);
+}
+
+function generateMarkdown(data) {
+  return `# ${data.title}
+  
+    ## Description
+  
+    ${data.description}
+  
+    <hr>
+  
+    ## Table of Contents
+  
+    <hr>
+  
+    ## Installaion Instructions
+  
+    ${data.install}
+  
+    <hr>
+  
+    ## Usage
+  
+    ${data.usage}
+  
+    <hr>
+  
+    ## Contributers
+  
+    ${data.contributer}
+  
+    <hr>
+  
+    ## Tests
+  
+    ${data.test}
+  
+    ## Questions
+  
+    <p>For any questions, contact me at the following: </p>
+  
+    Email: ${data.email}
+  
+    Github: ${data.github}
     
-    `# ${response.title}
+  `;
+}
 
-     ## Description
+promptUser()
+  .then(function (data) {
+    const readme = generateMarkdown(data);
 
-      ${response.description}
-
-      <hr>
-
-      ## Table of Contents
-
-      <hr>
-
-      ## Installaion Instructions
-
-      ${response.install}
-
-      <hr>
-
-      ## Usage
-
-      ${response.useage}
-
-      <hr>
-
-      ## Contributers
-
-      ${response.contributer}
-
-      <hr>
-
-      ## Tests
-
-      ${response.test}
-
-      ## Questions
-
-      <p>For any questions, contact me at the following: </p>
-
-      Email: ${response.email}
-
-      Github: ${response.github}
-
-      `;
-
-    fs.writeFile("README.md", readme, function (err) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Readme Generated!");
-      }
-    });
+    return writeFileAsync("README.md", readme);
+  })
+  .then(function () {
+    console.log("Readme Generated!");
+  })
+  .catch(function (err) {
+    console.log(err);
   });
