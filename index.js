@@ -1,7 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const generateMarkdown = require("./util/generateMarkdown");
 const util = require("util");
-
 const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
@@ -27,9 +27,10 @@ function promptUser() {
       name: "usage",
     },
     {
-      type: "input",
+      type: "list",
       message: "Select a license.",
-      name: "select",
+      name: "license",
+      choices: ["None", "MIT", "Apache 2.0", "GPLv3"],
     },
     {
       type: "input",
@@ -51,53 +52,12 @@ function promptUser() {
       message: "Enter your GitHub user name.",
       name: "github",
     },
+    {
+      type: "input",
+      message: "Enter github repository name if available.",
+      name: "repo",
+    },
   ]);
-}
-
-function generateMarkdown(data) {
-  return `# ${data.title}
-  
-    ## Description
-  
-    ${data.description}
-  
-    <hr>
-  
-    ## Table of Contents
-  
-    <hr>
-  
-    ## Installaion Instructions
-  
-    ${data.install}
-  
-    <hr>
-  
-    ## Usage
-  
-    ${data.usage}
-  
-    <hr>
-  
-    ## Contributers
-  
-    ${data.contributer}
-  
-    <hr>
-  
-    ## Tests
-  
-    ${data.test}
-  
-    ## Questions
-  
-    <p>For any questions, contact me at the following: </p>
-  
-    Email: ${data.email}
-  
-    Github: ${data.github}
-    
-  `;
 }
 
 promptUser()

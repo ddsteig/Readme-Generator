@@ -1,12 +1,13 @@
+function generateMarkdown(data) {
+  return `
 
-
-  # Shoot Me
-  ![GitHub](https://img.shields.io/github/license/ddsteig/readme-generator)
+  # ${data.title}
+  ![GitHub](https://img.shields.io/github/license/${data.github}/${data.repo})
 
   ## Table of Contents
   - [Description](#description)
   - [Installation Instructions](#install)
-  - [Usage](#usage)
+  - [Usage Information](#usage)
   - [Contributers](#contributers)
   - [Test](#test)
   - [License](#license)
@@ -16,31 +17,31 @@
   
   ## Description <a name="description"></a>
   
-  None
+  ${data.description}
   
   <hr>
   
   ## Installation Instructions <a name="install"></a>
   
-  None
+  ${data.install}
   
   <hr>
   
   ## Usage <a name="usage"></a>
   
-  None
+  ${data.usage}
   
   <hr>
   
   ## Contributers <a name="contributers"></a>
   
-  None
+  ${data.contributer}
   
   <hr>
   
   ## Test <a name="test"></a>
   
-  undefined
+  ${data.test}
   
   <hr>
   
@@ -48,7 +49,7 @@
   
   Please refer to the following license for guidelines, usage details, and information.
   
-  None
+  ${data.license}
   
   <hr>
   
@@ -56,8 +57,11 @@
   
   For any questions regarding this material, contact me at the following:
   
-  Email: None
+  Email: ${data.email}
   
-  Github: ddsteig
+  Github: ${data.github}
   
-  
+  `;
+}
+
+module.exports = generateMarkdown;
