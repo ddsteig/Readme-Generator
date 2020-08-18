@@ -52,12 +52,7 @@ function promptUser() {
       message: "Enter your GitHub user name.",
       name: "github",
     },
-    {
-      type: "input",
-      message: "Enter github repository name if available.",
-      name: "repo",
-    },
-  ]);
+    ]);
 }
 
 promptUser()

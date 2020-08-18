@@ -1,12 +1,13 @@
 
+  
+  # Readme Generator
 
-  # Shoot Me
-  ![GitHub](https://img.shields.io/github/license/ddsteig/readme-generator)
+  [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Table of Contents
   - [Description](#description)
   - [Installation Instructions](#install)
-  - [Usage](#usage)
+  - [Usage Information](#usage)
   - [Contributers](#contributers)
   - [Test](#test)
   - [License](#license)
@@ -16,25 +17,25 @@
   
   ## Description <a name="description"></a>
   
-  None
+  A readme generator that creates a readme in javascript, by running in node and answering prompts.
   
   <hr>
   
   ## Installation Instructions <a name="install"></a>
   
-  None
+  npm install inquirer
   
   <hr>
   
   ## Usage <a name="usage"></a>
   
-  None
+  Install inquirer, run node index.js, answer the prompts.
   
   <hr>
   
   ## Contributers <a name="contributers"></a>
   
-  None
+  UCF
   
   <hr>
   
@@ -48,7 +49,7 @@
   
   Please refer to the following license for guidelines, usage details, and information.
   
-  None
+  License: MIT
   
   <hr>
   
@@ -56,8 +57,8 @@
   
   For any questions regarding this material, contact me at the following:
   
-  Email: None
+  Email: tekhexrax@yahoo.com
   
-  Github: ddsteig
+  Github: [https://github.com/ddsteig](https://github.com/ddsteig)
   
   

@@ -1,8 +1,10 @@
 function generateMarkdown(data) {
+  
   return `
-
+  
   # ${data.title}
-  ![GitHub](https://img.shields.io/github/license/${data.github}/${data.repo})
+
+  ${badgeMaker(data.license)}
 
   ## Table of Contents
   - [Description](#description)
@@ -49,7 +51,7 @@ function generateMarkdown(data) {
   
   Please refer to the following license for guidelines, usage details, and information.
   
-  ${data.license}
+  License: ${data.license}
   
   <hr>
   
@@ -59,9 +61,34 @@ function generateMarkdown(data) {
   
   Email: ${data.email}
   
-  Github: ${data.github}
+  Github: [https://github.com/${data.github}](https://github.com/${data.github})
   
   `;
+}
+
+function badgeMaker(license) {
+  let badgeImg;
+  let badgeURL;
+
+switch (license) {
+  case "None":
+    badgeImg = "";
+    badgeURL = "";
+    break;
+  case "Apache 2.0":
+    badgeImg = "https://img.shields.io/badge/License-Apache%202.0-blue.svg";
+    badgeURL = "https://opensource.org/licenses/Apache-2.0";
+    break;
+  case "GPLv3":
+    badgeImg = "https://img.shields.io/badge/License-GPLv3-blue.svg";
+    badgeURL = "https://www.gnu.org/licenses/gpl-3.0";
+    break;
+  case "MIT":
+    badgeImg = "https://img.shields.io/badge/License-MIT-yellow.svg";
+    badgeURL = "https://opensource.org/licenses/MIT";
+    break;
+   }
+   return `[![License](${badgeImg})](${badgeURL})`;
 }
 
 module.exports = generateMarkdown;
