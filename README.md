@@ -21,7 +21,9 @@
   ![badge](https://github.com/ddsteig/readme-generator/blob/master/util/screenshots/badge.jpg)
   
   <hr>
+  
   ### Below is an example readme.md thats been created by the javascript.
+  
   <hr>
   
   # Readme Generator
