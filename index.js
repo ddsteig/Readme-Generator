@@ -1,8 +1,12 @@
+// Variables required for usage.
+
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./util/generateMarkdown");
 const util = require("util");
 const writeFileAsync = util.promisify(fs.writeFile);
+
+// This function uses inquirer to display user prompts when run through node.
 
 function promptUser() {
   return inquirer.prompt([
@@ -39,8 +43,8 @@ function promptUser() {
     },
     {
       type: "input",
-      message: "List any tests",
-      name: "tests",
+      message: "List any test information.",
+      name: "test",
     },
     {
       type: "input",
@@ -54,6 +58,9 @@ function promptUser() {
     },
     ]);
 }
+
+// This calls the prompt data and creates a promise to write the readme.
+// Also displays errors.
 
 promptUser()
   .then(function (data) {

@@ -1,3 +1,8 @@
+
+// This function genrates the template for the readme,
+// inputs the user's data from the prompts,
+// and calls the badgeMaker function to display the license badge.
+
 function generateMarkdown(data) {
   
   return `
@@ -41,7 +46,7 @@ function generateMarkdown(data) {
   
   <hr>
   
-  ## Test <a name="test"></a>
+  ## Test Information <a name="test"></a>
   
   ${data.test}
   
@@ -65,6 +70,9 @@ function generateMarkdown(data) {
   
   `;
 }
+
+
+// This function generates the badge based on user selection from prompt.
 
 function badgeMaker(license) {
   let badgeImg;
