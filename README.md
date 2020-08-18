@@ -1,4 +1,28 @@
-
+  # Readme Generator
+  
+  ## Information
+  
+  The below video shows a walkthrough of the prompts when the index.js is run in node.
+  
+  [Watch Video](https://drive.google.com/file/d/1actPfi2wLIvK-hG0Yd-jOXiTlHeNuy6d/view?usp=sharing)
+  
+  <hr>
+  
+  ## Code
+  
+  The following are some examples of the code used.
+  
+  ![variable](https://github.com/ddsteig/readme-generator/blob/master/util/screenshots/variable.JPG)
+  
+  ![data](https://github.com/ddsteig/readme-generator/blob/master/util/screenshots/data.jpg)
+  
+  ![generate](https://github.com/ddsteig/readme-generator/blob/master/util/screenshots/generate.jpg)
+  
+  ![badge](https://github.com/ddsteig/readme-generator/blob/master/util/screenshots/badge.jpg)
+  
+  <hr>
+  ### Below is an example readme.md thats been created by the javascript.
+  <hr>
   
   # Readme Generator
 
@@ -17,19 +41,20 @@
   
   ## Description <a name="description"></a>
   
-  A readme generator that creates a readme in javascript, by running in node and answering prompts.
+  A readme generator that creates a readme.md file in javascript, by running in node and answering prompts.
   
   <hr>
   
   ## Installation Instructions <a name="install"></a>
   
-  npm install inquirer
+  npm install inquirer, is required for it to operate in node.
   
   <hr>
   
   ## Usage <a name="usage"></a>
   
-  Install inquirer, run node index.js, answer the prompts.
+  The user will install inquirer first, and then run node index.js. They will then be presented with prompts to enter information into.
+  Once they are done the readme.md will be generated. They can add addtional information or items to the template thats been created.
   
   <hr>
   
