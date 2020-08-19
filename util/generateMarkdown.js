@@ -80,7 +80,7 @@ function badgeMaker(license) {
 
 switch (license) {
   case "None":
-    badgeImg = "";
+    badgeImg = "https://img.shields.io/badge/License-None-blue.svg";
     badgeURL = "";
     break;
   case "Apache 2.0":
@@ -92,7 +92,7 @@ switch (license) {
     badgeURL = "https://www.gnu.org/licenses/gpl-3.0";
     break;
   case "MIT":
-    badgeImg = "https://img.shields.io/badge/License-MIT-yellow.svg";
+    badgeImg = "https://img.shields.io/badge/License-MIT-blue.svg";
     badgeURL = "https://opensource.org/licenses/MIT";
     break;
    }
