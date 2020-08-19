@@ -30,7 +30,7 @@
   
   # Readme Generator
 
-  [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ![License](https://img.shields.io/badge/License-None-blue.svg)
 
   ## Table of Contents
   - [Description](#description)
@@ -78,7 +78,7 @@
   
   Please refer to the following license for guidelines, usage details, and information.
   
-  License: MIT
+  License: None
   
   <hr>
   
