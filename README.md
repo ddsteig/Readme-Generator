@@ -2,7 +2,7 @@
   
   ## Information
   
-  A example readme.md file is located in the util directory.
+  An example readme.md file is located in the util directory.
   
   The below video shows a walkthrough of the prompts when the index.js is run in node.
   
