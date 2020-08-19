@@ -30,7 +30,7 @@
   
   # Readme Generator
 
-  ![License](https://img.shields.io/badge/License-None-blue.svg)
+  [![License](https://img.shields.io/badge/License-None-blue.svg)](https://github.com/ddsteig/readme-generator)
 
   ## Table of Contents
   - [Description](#description)
