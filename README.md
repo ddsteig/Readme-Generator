@@ -2,6 +2,8 @@
   
   ## Information
   
+  A example readme.md file is located in the util directory.
+  
   The below video shows a walkthrough of the prompts when the index.js is run in node.
   
   [Watch Video](https://drive.google.com/file/d/1actPfi2wLIvK-hG0Yd-jOXiTlHeNuy6d/view?usp=sharing)
